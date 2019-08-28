@@ -2,6 +2,17 @@
   <div class="container">
     <div>
       <logo />
+      <!-- 导航链接 -->
+      <nuxt-link to="/users">测试页面</nuxt-link>
+      <el-button @click="$router.push('/users')">用户列表</el-button>
+      <el-button
+        @click="$router.push({ name: 'users-detail', query: { id: 1 } })"
+      >
+        用户详情
+      </el-button>
+      <el-button @click="$router.push({ name: 'users-id', params: { id: 1 } })">
+        动态路由
+      </el-button>
       <h1 class="title">
         nuxt-demo
       </h1>
